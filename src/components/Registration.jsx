@@ -23,9 +23,8 @@ export const RegistrationForm = () => {
 
     return (
         <div className="container">
-            <div className="signup-form">
+           <div className="signup-form">
                 <h2>Sign Up</h2>
-                <h1>Change</h1>
                 <p>Please fill in this form to create an account.</p>
                 <form onSubmit={handleFormSubmit}>
                     <label htmlFor="firstName">First Name</label>
@@ -41,8 +40,6 @@ export const RegistrationForm = () => {
                             onChange={handleInputChange}
 
                         />
-
-
 
                     <div className="form-el">
                         <label htmlFor="lasttName" className="form-label">
