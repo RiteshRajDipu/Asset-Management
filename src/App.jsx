@@ -6,7 +6,9 @@ import Home from "./components/Pages/Home";
 import LoginReg from "./components/Pages/auth/LoginReg";
 import ForgotPassword from "./components/Pages/auth/ForgotPassword";
 import ResetPassword from "./components/Pages/auth/ResetPassword";
-import Dashboard from "./components/Pages/Dashboard";
+// import Dashboard from "./components/Pages/Dashboard";
+import Dashboard from "./components/dashboard";
+import UserList from "./pages/userList/UserList";
 // import { RegistrationForm } from "./components/Registration";
 // import { SignupForm } from "./components/Signup";
 
@@ -23,7 +25,9 @@ function App() {
             <Route path="forgot-password" element={<ForgotPassword />} />
             <Route path="reset" element={<ResetPassword />} />
           </Route>
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/dashboard" element={<Dashboard />}/>
+          <Route path="/users" element={<UserList />} />          
           <Route path="*" element={<h1>Error 404 Page Not Found !!</h1>} />
         </Routes>
     

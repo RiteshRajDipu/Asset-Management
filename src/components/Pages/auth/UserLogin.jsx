@@ -25,7 +25,7 @@ const UserLogin = () => {
             type: 'success' })
             setTimeout(() => {
                 navigate('/dashboard')
-            }, 1000) 
+            }, 3000) 
         console.log(actualData);
     } else{
         setError({status: true, msg:"All fields are required",
