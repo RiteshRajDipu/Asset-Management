@@ -1,6 +1,6 @@
 
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
-import "./featuredInfo.css";
+import "./featuredInfo.scss";
 
 const FeaturedInfo = () => {
     return (
