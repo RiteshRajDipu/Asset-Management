@@ -1,4 +1,4 @@
-import "./topbar.css";
+import "./topbar.scss";
 import {Language, Notifications, Settings } from '@mui/icons-material';
 
 const Topbar = () => {

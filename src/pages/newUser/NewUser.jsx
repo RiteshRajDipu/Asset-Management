@@ -1,5 +1,5 @@
 
-import "./newUser.css";
+import "./newUser.scss";
 
 export default function NewUser() {
     return (

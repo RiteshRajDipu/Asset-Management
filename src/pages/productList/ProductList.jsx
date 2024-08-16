@@ -1,5 +1,5 @@
 
-import "./productList.css";
+import "./productList.scss";
 import { DataGrid } from '@mui/x-data-grid';
 import { DeleteOutline } from "@mui/icons-material";
 import {productRows} from "../../dummyData";

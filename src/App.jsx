@@ -1,6 +1,6 @@
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
-import "./App.css";
+import "./App.scss";
 import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
@@ -9,25 +9,34 @@ import NewUser from "./pages/newUser/newUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
-import LoginReg from "./components/Pages/auth/LoginReg";
+import LoginReg from "./pages/loginReg/auth/LoginReg";
 
 function App() {
   return (
     <Router>
-      <Topbar />
-      <div className="container">
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/users" element={<UserList />} />
-          <Route path="/user/:userId" element={<User />} />
-          <Route path="/newUser" element={<NewUser />} />
-          <Route path="/products" element={<ProductList />}  />
-          <Route path="/product/:productId" element={<Product />} />
-          <Route path="newProduct" element={<NewProduct />} />
-          <Route path="/login" element={<LoginReg /> } />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/login" element={<LoginReg />} />
+        <Route
+          path="/*"
+          element={
+            <>
+              <Topbar />
+              <div className="container">
+                <Sidebar />
+                <Routes>
+                  <Route index element={<Home />} />
+                  <Route path="/users" element={<UserList />} />
+                  <Route path="/user/:userId" element={<User />} />
+                  <Route path="/newUser" element={<NewUser />} />
+                  <Route path="/products" element={<ProductList />} />
+                  <Route path="/product/:productId" element={<Product />} />
+                  <Route path="newProduct" element={<NewProduct />} />
+                </Routes>
+              </div>
+            </>
+           } 
+          />
+      </Routes>
     </Router>
   );
 }
@@ -64,7 +73,7 @@ export default App;
 //   </Route>
 //   {/* <Route path="/dashboard" element={<Dashboard />} /> */}
 //   {/* <Route path="/dashboard" element={<Dashboard />}/>
-//   <Route path="/users" element={<UserList />} />          
+//   <Route path="/users" element={<UserList />} />
 //   <Route path="*" element={<h1>Error 404 Page Not Found !!</h1>} />
 // </Routes> */}
 

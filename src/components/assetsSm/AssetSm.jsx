@@ -1,5 +1,5 @@
 import { Visibility } from "@mui/icons-material";
-import "./assetSm.css";
+import "./assetSm.scss";
 
 export default function AssetSm() {
   return (

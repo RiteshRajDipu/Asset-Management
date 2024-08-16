@@ -1,4 +1,4 @@
-import "./assetLg.css";
+import "./assetLg.scss";
 
 export default function AssetLg() {
   const Button = ({ type }) => {
