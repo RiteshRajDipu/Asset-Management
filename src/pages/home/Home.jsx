@@ -1,9 +1,10 @@
-import Chart from "../../components/dashboard/chart/Chart";
-import FeaturedInfo from "../../components/dashboard/featuredInfo/FeaturedInfo";
+
+import Chart from "../../components/chart/Chart";
+import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
 import "./home.css";
 import {userData} from "../../dummyData"
-import AssetSm from "../../components/dashboard/AssetsSm/AssetSm";
-import AssetLg from "../../components/dashboard/AssetsLg/AssetLg";
+import AssetSm from "../../components/AssetsSm/AssetSm";
+import AssetLg from "../../components/AssetsLg/AssetLg";
 
 
 

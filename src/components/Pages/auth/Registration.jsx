@@ -25,7 +25,7 @@ const Registration = () => {
         document.getElementById('registration-form').reset()
         setError({ status: true, msg: "Registration Successful", type: 'success' })
         setTimeout(() => {
-          navigate('/dashboard')
+          navigate('/')
         },2000)
        
       } else {

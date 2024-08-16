@@ -24,7 +24,7 @@ const UserLogin = () => {
         setError({status: true, msg:"Login Success",
             type: 'success' })
             setTimeout(() => {
-                navigate('/dashboard')
+                navigate('/')
             }, 3000) 
         console.log(actualData);
     } else{
