@@ -594,23 +594,23 @@
     prop-types "^15.8.1"
     react-is "^18.3.1"
 
-"@mui/x-data-grid@^7.12.1":
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-7.12.1.tgz#70ac9c6d8f3c3a2de0e0ff7dcff5edbb83c6c24a"
-  integrity sha512-/l9AslZKoHFfOultD2ehWIxRGuBI0RUwbhVbpAPwNP3ouDbTH0eyWfd5f6KCGhcUbG6xfceiOuTNr7uaPHqKiA==
+"@mui/x-data-grid@^7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-7.13.0.tgz#23629576d05e7141380c0fcd86de469ed9fe0658"
+  integrity sha512-opV4OgNqc9UoKkQ1z5Ot2AkluwiVQMo6UmDaxmT/v0k2uQ77eQvxJqbnCwYll0XjsRzPz6ehiTaK3nbhXm0sIQ==
   dependencies:
     "@babel/runtime" "^7.25.0"
     "@mui/system" "^5.16.5"
     "@mui/utils" "^5.16.5"
-    "@mui/x-internals" "7.12.0"
+    "@mui/x-internals" "7.13.0"
     clsx "^2.1.1"
     prop-types "^15.8.1"
     reselect "^4.1.8"
 
-"@mui/x-internals@7.12.0":
-  version "7.12.0"
-  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-7.12.0.tgz#9154efbf97ed5745cbd3598afea08c785c13253e"
-  integrity sha512-zgu/JqSXBflSvtzfFN8lNi5Wxw79czBv6V/crOrXqCCOzxAIsrcup2FZlwvXlzetm3otS7o/Tzfo/O5dE68NkA==
+"@mui/x-internals@7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-7.13.0.tgz#80ab1ecf6ffa345a800a94b4181dae6c487b3c51"
+  integrity sha512-eUK7iykkDWU+wBfTzE/S0qh4awgVgsORfrpvuPbUp+E6qUj1Xhu9M/WKzbwz0CPFnTJZwBQ9KYrxpGXnPBEpRQ==
   dependencies:
     "@babel/runtime" "^7.25.0"
     "@mui/utils" "^5.16.5"
@@ -2456,6 +2456,11 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
+
+react-circular-progressbar@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-circular-progressbar/-/react-circular-progressbar-2.1.0.tgz#99e5ae499c21de82223b498289e96f66adb8fa3a"
+  integrity sha512-xp4THTrod4aLpGy68FX/k1Q3nzrfHUjUe5v6FsdwXBl3YVMwgeXYQKDrku7n/D6qsJA9CuunarAboC2xCiKs1g==
 
 react-dom@^18.3.1:
   version "18.3.1"

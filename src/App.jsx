@@ -1,27 +1,53 @@
-import Sidebar from "./components/sidebar/Sidebar";
-import Topbar from "./components/topbar/Topbar";
-import "./App.scss";
-import Home from "./pages/home/Home";
+// import Sidebar from "./components/sidebar/Sidebar";
+// import Topbar from "./components/topbar/Topbar";
+// import "./App.scss";
+// import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UserList from "./pages/userList/UserList";
-import User from "./pages/user/User";
-import NewUser from "./pages/newUser/newUser";
-import ProductList from "./pages/productList/ProductList";
-import Product from "./pages/product/Product";
-import NewProduct from "./pages/newProduct/NewProduct";
-import LoginReg from "./pages/loginReg/auth/LoginReg";
+// import UserList from "./pages/userList/UserList";
+// import User from "./pages/user/User";
+// import NewUser from "./pages/newUser/newUser";
+// import ProductList from "./pages/productList/ProductList";
+// import Product from "./pages/product/Product";
+// import NewProduct from "./pages/newProduct/NewProduct";
+// import LoginReg from "./pages/loginReg/auth/LoginReg";
+import Home from "./pages/home/Home";
+import List from "./pages/list/List";
+import Single from "./pages/single/Single";
+import New from "./pages/new/New";
+import { productInputs, userInputs } from "./formSource";
+import SignUpForm from "./pages/login/SignUpForm";
+// import LoginForm from "./pages/login/LoginForm";
+// import CombinedAuthForm from "./pages/login/LoginForm";
+import AuthPage from "./pages/login/AuthPage";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<LoginReg />} />
+        <Route path="/login" element={<AuthPage /> } />
         <Route
           path="/*"
           element={
             <>
-              <Topbar />
-              <div className="container">
+               <Routes>
+                 <Route index element={<Home />} />
+                 <Route path="auth" element={<SignUpForm /> } />
+                 <Route path="login" element={<AuthPage />} />
+                 <Route path="users">
+                    <Route index element={<List />} />
+                    <Route path=":userId" element={<Single />} />
+                    <Route path="new" element={<New inputs={userInputs} title="Add New User" />} />
+                 </Route>
+                 <Route path="products">
+                    <Route index element={<List />} />
+                    <Route path=":productId" element={<Single />} />
+                    <Route path="new" element={<New inputs={productInputs} title="Add New Product" />} />
+                 </Route>
+               </Routes>
+             
+
+
+              {/* <div className="container">
                 <Sidebar />
                 <Routes>
                   <Route index element={<Home />} />
@@ -32,7 +58,7 @@ function App() {
                   <Route path="/product/:productId" element={<Product />} />
                   <Route path="newProduct" element={<NewProduct />} />
                 </Routes>
-              </div>
+              </div> */}
             </>
            } 
           />
