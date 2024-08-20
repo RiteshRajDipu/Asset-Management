@@ -1,25 +1,35 @@
-
-import Chart from "../../components/chart/Chart";
-import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
 import "./home.scss";
-import {userData} from "../../dummyData"
-import AssetSm from "../../components/AssetsSm/AssetSm";
-import AssetLg from "../../components/AssetsLg/AssetLg";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Assets from "../../components/assets/Assets";
+import Featured from "../../components/featured/Featured";
+import Chart from "../../components/chart/Chart";
+import List from "../../components/table/Table";
 
 
-
-
-const Home = () => {
+function Home() {
   return (
     <div className="home">
-      <FeaturedInfo />
-      <Chart data={userData} dataKey="Active_User" title="User Analytics" grid />
-      <div className="homeAssets">
-        <AssetSm />
-        <AssetLg />
-      </div> 
+        <Sidebar />
+        <div className="homeContainer">
+          <Navbar />
+          <div className="assets">
+            <Assets type="user" />
+            <Assets type="order" />
+            <Assets type="earning" />
+            <Assets type="balance" />
+          </div>
+          <div className="charts">
+            <Featured />
+            <Chart title="Last 6 Months (Revenue)" aspect={2/1} />
+          </div>
+          <div className="listContainer">
+            <div className="listTitle">Latest Transactions</div>
+            <List />
+          </div>
+        </div>
     </div>
   )
 }
 
-export default Home
+export default Home;
