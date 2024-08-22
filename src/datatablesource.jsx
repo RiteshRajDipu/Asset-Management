@@ -39,7 +39,7 @@ export const userColumns = [
 ];
 
 //temporary data
-export const userRows = [
+export const userRows = [ 
   {
     id: 1,
     username: "Snow",

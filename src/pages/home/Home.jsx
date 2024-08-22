@@ -1,33 +1,21 @@
 import "./home.scss";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Assets from "../../components/assets/Assets";
-import Featured from "../../components/featured/Featured";
-import Chart from "../../components/chart/Chart";
-import List from "../../components/table/Table";
+import TopBox from "../../components/topBox/topBox";
+import ChartBox from "../../components/chartBox/ChartBox";
+import { chartBoxProduct, chartBoxUser } from "../../data";
 
 
 function Home() {
   return (
     <div className="home">
-        <Sidebar />
-        <div className="homeContainer">
-          <Navbar />
-          <div className="assets">
-            <Assets type="user" />
-            <Assets type="order" />
-            <Assets type="earning" />
-            <Assets type="balance" />
-          </div>
-          <div className="charts">
-            <Featured />
-            <Chart title="Last 6 Months (Revenue)" aspect={2/1} />
-          </div>
-          <div className="listContainer">
-            <div className="listTitle">Latest Transactions</div>
-            <List />
-          </div>
-        </div>
+      <div className="box box1">
+       <ChartBox {...chartBoxUser}/>
+      </div>
+      <div className="box box1">
+        <ChartBox {...chartBoxProduct} />
+      </div>
+      <div className="box box2">
+         <TopBox />
+      </div>
     </div>
   )
 }

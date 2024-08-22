@@ -1,50 +1,59 @@
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import "./datatable.scss";
-import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../datatablesource";
 import { Link } from "react-router-dom";
 
+const Datatable = (props) => {
 
-const Datatable = () => {
+  const handleDelete = (id) => {
+     console.log(id + "row deleted");
+  }
 
-  const actionColumn = [
-    {
-      field: "action",
-      headerName: "Action",
-      width: 200,
-      renderCell: () => {
-        return (
-          <div className="cellAction">
-            <Link to="/users/test">
-              <button className="viewButton">View</button>
-            </Link>
-            <button className="deleteButton">Delete</button>
+  const actionColumn = {
+    field: "action",
+    headerName: "Action",
+    width: 200,
+    renderCell: (params) => {
+      return (
+        <div className="action">
+          <Link to={`/${props.slug}/${params.row.id}`}>
+            <img src="/view.svg" alt="" />
+          </Link>
+          <div className="delete" onClick={() => handleDelete(params.row.id)}>
+            <img src="/delete.svg" alt="" />
           </div>
-        );
-      },
+        </div>
+      );
     },
-  ];
- 
+  };
+
   return (
-    <div className="datatable">
-      <div className="datatableTitle">
-        Add New User
-        <Link to="/users/new" className="link">
-          Add New 
-        </Link>
-      </div>
+    <div className="dataTable">
       <DataGrid
-        rows={userRows}
-        columns={userColumns.concat(actionColumn)}
+        className="dataGrid"
+        rows={props.rows}
+        columns={[...props.columns, actionColumn]}
         initialState={{
           pagination: {
-            paginationModel: { page: 0, pageSize: 8 },
+            paginationModel: {
+              pageSize: 5,
+            },
           },
         }}
-        pageSizeOptions={[8, 10]}
+        slots={{toolbar:GridToolbar}}
+        slotProps={{
+          toolbar:{
+            showQuickFilter:true,
+            quickFilterProps:{debounceMs: 500},
+          }
+        }}
+        pageSizeOptions={[5]}
         checkboxSelection
+        disableRowSelectionOnClick
+        disableDensitySelector
+        disableColumnSelector
       />
     </div>
   )
 }
 
-export default Datatable
+export default Datatable;

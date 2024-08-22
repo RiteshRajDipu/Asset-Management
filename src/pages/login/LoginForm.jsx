@@ -37,6 +37,8 @@ const LoginForm = () => {
     return Object.keys(tempErrors).length === 0;
   };
 
+    []
+
   const handleChangeLogin = (e) => {
     const { name, value } = e.target;
     setLoginData({
