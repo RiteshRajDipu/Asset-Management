@@ -1,10 +1,21 @@
 import "./add.scss";
+import { userRows } from "../../data";
 
 const Add = (props) => {
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
+  const addNewUser = (payload) => {
+     console.log(payload)
+  };
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const obj = {};
+ 
+    for (let [key, value] of formData.entries()) {
+      obj[key] = value;
+    }    
+    props.onAdd(obj);
   };
 
   return (
@@ -18,10 +29,10 @@ const Add = (props) => {
           .map(column=>(
             <div className="item" key={column.field}>
               <label>{column.headerName}</label>
-              <input type={column.type} placeholder={column.field} />
+              <input value={column.dataValue} type={column.type} name={column.field} placeholder={column.field} />
             </div>
           ))}
-          <button>Send</button>
+          <button onClick={() => addNewUser(userRows)}>Send</button>
         </form>
       </div>
     </div>

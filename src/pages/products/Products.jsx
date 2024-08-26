@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Add from "../../components/add/Add";
 import Datatable from "../../components/datatable/Datatable";
-import { products } from "../../data";
+// import { products } from "../../data";
 import "./products.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct, updateIds, removeProduct } from '../../store/slices/ProductSlice';
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -45,9 +47,26 @@ const columns = [
     type: "boolean",
   },
 ]
-
+ 
 function Products() {
   const [open, setOpen] = useState(false);
+   const dispatch = useDispatch();
+   const products = useSelector((state) => {
+    return state.products.productItems
+   })
+
+
+   const addProductHandler = (newProd) => {
+    console.log('new prod', newProd);
+    setOpen(false);
+    dispatch(addProduct(newProd));
+   }
+
+   const onDeleteHandler = (data) => {
+    dispatch(removeProduct(data));
+    dispatch(updateIds());
+  }
+ 
 
   return (
     <div className='products'>
@@ -55,8 +74,13 @@ function Products() {
         <h1>Title</h1>
         <button onClick={()=>setOpen(true)}>Add New Product</button>
       </div>
-      <Datatable slug="products" columns={columns} rows={products} />
-      {open &&  <Add slug="product" columns={columns} setOpen={setOpen} />}
+      <Datatable 
+        slug="products" 
+        columns={columns} 
+        rows={products}
+        onDelete={onDeleteHandler}
+        />
+      {open &&  <Add slug="product" onAdd={addProductHandler} columns={columns} setOpen={setOpen} />}
     </div>
   )
 }

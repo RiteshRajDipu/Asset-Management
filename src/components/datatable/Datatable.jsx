@@ -1,12 +1,9 @@
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import "./datatable.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Datatable = (props) => {
-
-  const handleDelete = (id) => {
-     console.log(id + "row deleted");
-  }
 
   const actionColumn = {
     field: "action",
@@ -15,10 +12,13 @@ const Datatable = (props) => {
     renderCell: (params) => {
       return (
         <div className="action">
-          <Link to={`/${props.slug}/${params.row.id}`}>
+          {/* <Link to={`/${props.slug}/${params.row.id}`}>
             <img src="/view.svg" alt="" />
+          </Link> */}
+          <Link onClick={() => props.onEdit(params.row)}>
+          <img src="/view.svg" alt="" />
           </Link>
-          <div className="delete" onClick={() => handleDelete(params.row.id)}>
+          <div className="delete" onClick={() => props.onDelete(params.row)}>
             <img src="/delete.svg" alt="" />
           </div>
         </div>

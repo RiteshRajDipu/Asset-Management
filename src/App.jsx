@@ -1,22 +1,16 @@
 import Home from "./pages/home/Home";
-// import List from "./pages/list/List";
-// import Single from "./pages/single/Single";
-// import New from "./pages/new/New";
-// import { productInputs, userInputs } from "./formSource";
-// import SignUpForm from "./pages/login/SignUpForm";
-
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-
 import Products from "./pages/products/Products";
-import Users from "./pages/Users/Users";
+import Users from "./pages/users/Users";
 import Navbar from "./components/navbar/Navbar";
 import AuthPage from "./pages/login/AuthPage";
-import "./styles/global.scss";
 import Sidebar from "./components/sidebar/Sidebar";
 import User from "./pages/user/User";
 import Product from "./pages/product/Product";
+import "./styles/global.scss";
+import Update from "./pages/login/Update";
 
-function App() {
+const App = () => {
   const Layout = () => {
     return (
       <div className="main">
@@ -63,6 +57,10 @@ function App() {
     {
       path:"/login",
       element: <AuthPage />
+    },
+    {
+      path:"/update",
+      element: <Update />
     }
   ]);
 
