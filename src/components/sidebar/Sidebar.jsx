@@ -1,7 +1,6 @@
 
 import { Link } from "react-router-dom";
 import "./sidebar.scss";
-// import { AccountCircleOutlined, CreditCard, Dashboard, ExitToApp, InsertChart, LocalShipping, NotificationsNone, Person, PsychologyOutlined, SettingsApplications, SettingsSystemDaydream, Store } from "@mui/icons-material";
 
 import { menu } from "../../data";
 

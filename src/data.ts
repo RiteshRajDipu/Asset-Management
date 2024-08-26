@@ -1,3 +1,4 @@
+
 export const menu = [
     {
       id: 1,
@@ -33,12 +34,6 @@ export const menu = [
           url: "/products",
           icon: "product.svg",
         },
-        {
-          id: 3,
-          title: "Orders",
-          url: "/orders",
-          icon: "order.svg",
-        },
       ],
     },
     {
@@ -51,12 +46,12 @@ export const menu = [
           url: "/",
           icon: "element.svg",
         },
-        {
-          id: 4,
-          title: "Calendar",
-          url: "/",
-          icon: "calendar.svg",
-        },
+        // {
+        //   id: 4,
+        //   title: "Calendar",
+        //   url: "/",
+        //   icon: "calendar.svg",
+        // },
       ],
     },
     {
@@ -69,17 +64,23 @@ export const menu = [
           url: "/",
           icon: "setting.svg",
         },
+        {
+          id: 2,
+          title: "Logout",
+          url: "/login",
+          
+        },
       ],
     },
     {
       id: 5,
-      title: "analytics",
+      title: "Acount",
       listItems: [
         {
           id: 1,
-          title: "Charts",
-          url: "/",
-          icon: "chart.svg",
+          title: "Update",
+          url: "/update",
+          icon: "profile.svg",
         },
       ],
     },

@@ -1,6 +1,7 @@
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 import "./chartBox.scss";
 import React from "react";
+import { useSelector } from "react-redux";
 
 type Props = {
     color: string;
@@ -13,12 +14,15 @@ type Props = {
   
 
 function ChartBox(props: Props) {
+    // const users = useSelector((state) => state.users.items.length)
+    
     return (
         <div className="chartBox">
             <div className="boxInfo">
                 <div className="title">
                     <span>{props.title}</span>
                 </div>
+                {/* <h1>{props.number}</h1> */}
                 <h1>{props.number}</h1>
             </div>
             <div className="chartInfo">

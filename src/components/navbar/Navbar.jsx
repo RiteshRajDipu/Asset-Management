@@ -1,8 +1,13 @@
+import { useSelector } from "react-redux";
 import "./navbar.scss";
 import {  Settings } from "@mui/icons-material";
 
 
-function Navbar() {
+const Navbar = () => {
+ const name = useSelector(state => state.user.name);
+
+ console.log("navbar rendered")
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -14,7 +19,7 @@ function Navbar() {
             src="mypic.jpg"
             alt=""
           />
-          <span>Ritesh</span>
+          <span>{name}</span>
         </div>
         <img src="/settings.svg" alt="" className="icon" />
         <Settings />
