@@ -1,22 +1,15 @@
-/* src/components/Update.scss */
-
-// Variables
-$primary-color: #007bff;
-$primary-color-hover: #0056b3;
+$primary-color: #9c27b0;
 $delete-color: #e74c3c;
-$delete-color-hover: #c0392b;
-$background-color: #f4f4f4;
+$background-color: #f3e5f5; 
 $white: #fff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 
-// Base styles
 .update {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
   background-color: $background-color;
-  // height: 100vh;
 
   .updateWrapper {
     background-color: $white;
@@ -41,11 +34,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
       font-size: 10px;
       padding: 5px 20px;
       margin-bottom: 20px;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: $delete-color-hover;
-      }
     }
 
     .updateContainer {
@@ -73,7 +61,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
           }
 
           .change {
-            color: $primary-color;
             cursor: pointer;
             text-decoration: none;
           }
@@ -96,16 +83,6 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         cursor: pointer;
         font-size: 16px;
         padding: 10px 20px;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: $primary-color-hover;
-        }
-
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
-        }
       }
     }
   }

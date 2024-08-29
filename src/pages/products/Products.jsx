@@ -51,15 +51,13 @@ const columns = [
 function Products() {
   const [open, setOpen] = useState(false);
    const dispatch = useDispatch();
-   const products = useSelector((state) => {
-    return state.products.productItems
-   })
+   const products = useSelector((state) => state.products.productItems)
 
 
    const addProductHandler = (newProd) => {
-    console.log('new prod', newProd);
     setOpen(false);
     dispatch(addProduct(newProd));
+    dispatch(updateIds());
    }
 
    const onDeleteHandler = (data) => {

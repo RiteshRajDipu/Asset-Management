@@ -1,16 +1,7 @@
-// SignUpForm.js
+import "./signUpForm.scss";
 import { useState } from 'react';
-import { TextField, Button, Typography, Alert, createTheme, ThemeProvider } from '@mui/material';
-import { purple } from '@mui/material/colors';
+import { TextField, Button, Typography, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: purple[500],
-    },
-  },
-});
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -67,79 +58,65 @@ const SignUpForm = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <form onSubmit={handleSubmitSignUp} noValidate>
-        <Typography variant="h4" gutterBottom color="primary" align="center">
-          Sign Up
-        </Typography>
-        {successMessage && (
-          <Alert severity="success" style={{ marginBottom: '16px' }}>
-            {successMessage}
-          </Alert>
-        )}
-        <TextField
-          label="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChangeSignUp}
-          fullWidth
-          margin="normal"
-          error={!!errors.name}
-          helperText={errors.name}
-          InputLabelProps={{
-            style: { color: purple[500] }
-          }}
-          InputProps={{
-            style: { borderColor: purple[500] }
-          }}
-        />
-        <TextField
-          label="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChangeSignUp}
-          fullWidth
-          margin="normal"
-          error={!!errors.email}
-          helperText={errors.email}
-          InputLabelProps={{
-            style: { color: purple[500] }
-          }}
-        />
-        <TextField
-          label="Password"
-          name="password"
-          type="password"
-          value={formData.password}
-          onChange={handleChangeSignUp}
-          fullWidth
-          margin="normal"
-          error={!!errors.password}
-          helperText={errors.password}
-          InputLabelProps={{
-            style: { color: purple[500] }
-          }}
-        />
-        <TextField
-          label="Confirm Password"
-          name="confirmPassword"
-          type="password"
-          value={formData.confirmPassword}
-          onChange={handleChangeSignUp}
-          fullWidth
-          margin="normal"
-          error={!!errors.confirmPassword}
-          helperText={errors.confirmPassword}
-          InputLabelProps={{
-            style: { color: purple[500] }
-          }}
-        />
-        <Button type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: '16px' }}>
-          Sign Up
-        </Button>
-      </form>
-    </ThemeProvider>
+      <div className="sign-up-form-container">
+        <form className="sign-up-form" onSubmit={handleSubmitSignUp} noValidate>
+          <Typography variant="h4" color="primary" align="center">
+            Sign Up
+          </Typography>
+          {successMessage && (
+            <Alert severity="success" style={{ marginBottom: '16px' }}>
+              {successMessage}
+            </Alert>
+          )}
+          <TextField
+            label="Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChangeSignUp}
+            fullWidth
+            margin="normal"
+            error={!!errors.name}
+            helperText={errors.name}
+          />
+          <TextField
+            label="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChangeSignUp}
+            fullWidth
+            margin="normal"
+            error={!!errors.email}
+            helperText={errors.email}
+          />
+          <TextField
+            label="Password"
+            name="password"
+            type="password"
+            value={formData.password}
+            onChange={handleChangeSignUp}
+            fullWidth
+            margin="normal"
+            error={!!errors.password}
+            helperText={errors.password}
+          />
+          <TextField
+            label="Confirm Password"
+            name="confirmPassword"
+            type="password"
+            value={formData.confirmPassword}
+            onChange={handleChangeSignUp}
+            fullWidth
+            margin="normal"
+            error={!!errors.confirmPassword}
+            helperText={errors.confirmPassword}
+          />
+          <Button type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: '16px' }}>
+            Sign Up
+          </Button>
+        </form>
+      </div>
   );
 };
 
 export default SignUpForm;
+

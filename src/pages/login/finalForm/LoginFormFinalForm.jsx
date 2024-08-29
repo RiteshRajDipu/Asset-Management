@@ -1,10 +1,9 @@
-import "./loginForm.scss";
+import "./loginFormFinalForm.scss";
 import { useState } from 'react';
 import { TextField, Button, Typography, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-
-const LoginForm = () => {
+const LoginFormFinalForm = () => {
   const [loginData, setLoginData] = useState({
     email: '',
     password: ''
@@ -93,4 +92,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default LoginFormFinalForm;
