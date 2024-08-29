@@ -1,13 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
-
 import './searchBar.scss';
+import { useDispatch, useSelector } from 'react-redux';
 import { setSearchQuery } from '../../store/slices/ProductSlice';
-
 
 const SearchBar = () => {
     const dispatch = useDispatch();
     const searchQuery = useSelector((state) => state.products.searchQuery);
-
+  
     const handleSearchChange = (e) => {
         const query = e.target.value || '';
         dispatch(setSearchQuery(query));

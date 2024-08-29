@@ -1,7 +1,6 @@
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import "./datatable.scss";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Datatable = (props) => {
 
@@ -16,7 +15,7 @@ const Datatable = (props) => {
             <img src="/view.svg" alt="" />
           </Link> */}
           <Link onClick={() => props.onEdit(params.row)}>
-          <img src="/view.svg" alt="" />
+            <img src="/view.svg" alt="" />
           </Link>
           <div className="delete" onClick={() => props.onDelete(params.row)}>
             <img src="/delete.svg" alt="" />
@@ -39,11 +38,11 @@ const Datatable = (props) => {
             },
           },
         }}
-        slots={{toolbar:GridToolbar}}
+        slots={{ toolbar: GridToolbar }}
         slotProps={{
-          toolbar:{
-            showQuickFilter:true,
-            quickFilterProps:{debounceMs: 500},
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
           }
         }}
         pageSizeOptions={[5]}

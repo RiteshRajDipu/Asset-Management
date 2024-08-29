@@ -1,0 +1,41 @@
+$background-color: #f3e5f5; 
+$error-color: #d32f2f;
+
+.login-form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+  .MuiTextField-root {
+    margin-bottom: 16px;
+
+    .MuiFormHelperText-root {
+      color: $error-color;
+    }
+
+    .MuiOutlinedInput-root {
+      &.Mui-error .MuiOutlinedInput-notchedOutline {
+        border-color: $error-color;
+      }
+    }
+  }
+
+  .MuiButton-root {
+    margin-top: 16px;
+  }
+
+  .MuiAlert-root {
+    margin-bottom: 16px;
+  }
+}

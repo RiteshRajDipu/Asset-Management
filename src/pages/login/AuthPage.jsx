@@ -1,9 +1,10 @@
-// AuthPage.js
 import { useState } from 'react';
 import { Grid, Tabs, Tab, createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
-import LoginForm from './LoginForm';
+// import LoginForm from './LoginForm';
+
 import SignUpForm from './SignUpForm';
+import LoginFormFinalForm from './finalForm/LoginFormFinalForm';
 
 const theme = createTheme({
   palette: {
@@ -28,7 +29,7 @@ const AuthPage = () => {
             <Tab label="Login" />
             <Tab label="Sign Up" />
           </Tabs>
-          {activeTab === 0 && <LoginForm />}
+          {activeTab === 0 && <LoginFormFinalForm />}
           {activeTab === 1 && <SignUpForm />}
         </Grid>
       </Grid>

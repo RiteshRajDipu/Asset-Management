@@ -87,93 +87,6 @@ export const menu = [
   ];
   
 
-export const latestAssets = [
-    {
-      id: 1143155,
-      product: "Acer Nitro 5",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 785,
-      method: "Cash on Delivery",
-      status: "Approved",
-    },
-    {
-      id: 2235235,
-      product: "Playstation 5",
-      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
-      date: "1 March",
-      amount: 900,
-      method: "Online Payment",
-      status: "Pending",
-    },
-    {
-      id: 2342353,
-      product: "Redragon S101",
-      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 35,
-      method: "Cash on Delivery",
-      status: "Pending",
-    },
-    {
-      id: 2357741,
-      product: "Razer Blade 15",
-      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
-      date: "1 March",
-      amount: 920,
-      method: "Online",
-      status: "Approved",
-    },
-    {
-      id: 2342355,
-      product: "ASUS ROG Strix",
-      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
-      date: "1 March",
-      amount: 2000,
-      method: "Online",
-      status: "Pending",
-    },
-  ];
-
-  export const chartBoxUser = {
-    color: "#8884d8",
-    title: "Total Users",
-    number: "11",
-    dataKey: "users",
-    percentage: 45,
-    chartData: [
-      { name: "Sun", users: 400 },
-      { name: "Mon", users: 600 },
-      { name: "Tue", users: 500 },
-      { name: "Wed", users: 700 },
-      { name: "Thu", users: 400 },
-      { name: "Fri", users: 500 },
-      { name: "Sat", users: 450 },
-    ],
-  };
-
-  export const chartBoxProduct = {
-    color: "skyblue",
-    title: "Total Products",
-    number: "238",
-    dataKey: "products",
-    percentage: 21,
-    chartData: [
-      { name: "Sun", products: 400 },
-      { name: "Mon", products: 600 },
-      { name: "Tue", products: 500 },
-      { name: "Wed", products: 700 },
-      { name: "Thu", products: 400 },
-      { name: "Fri", products: 500 },
-      { name: "Sat", products: 450 },
-    ],
-  };
-
   export const userRows = [
     {
       id: 1,
@@ -314,7 +227,6 @@ export const latestAssets = [
       color: "white",
       producer: "Sony",
       price: "$250.99",
-      createdAt: "01.02.2023",
       inStock: true,
     },
     {
@@ -324,7 +236,6 @@ export const latestAssets = [
       color: "black",
       producer: "Dell",
       price: "$499.99",
-      createdAt: "01.02.2023",
       inStock: true,
     },
     {
@@ -334,7 +245,6 @@ export const latestAssets = [
       color: "gray",
       producer: "Samsung",
       price: "$999.49",
-      createdAt: "01.02.2023",
       inStock: true,
     },
     {
@@ -344,7 +254,6 @@ export const latestAssets = [
       color: "white",
       producer: "Apple",
       price: "$799.49",
-      createdAt: "01.02.2023",
       inStock: true,
     },
     {
@@ -354,7 +263,6 @@ export const latestAssets = [
       color: "rainbow",
       producer: "Philips",
       price: "$39.99",
-      createdAt: "01.02.2023",
     },
     {
       id: 6,
@@ -363,7 +271,6 @@ export const latestAssets = [
       color: "black",
       producer: "Logitech",
       price: "$59.49",
-      createdAt: "01.02.2023",
       inStock: true,
     },
     {
@@ -373,7 +280,6 @@ export const latestAssets = [
       color: "gray",
       producer: "Rode",
       price: "$119.49",
-      createdAt: "01.02.2023",
     },
     {
       id: 8,
@@ -382,7 +288,6 @@ export const latestAssets = [
       color: "white",
       producer: "Toshiba",
       price: "$899.99",
-      createdAt: "01.02.2023",
       inStock: true,
     },
     {
@@ -392,7 +297,6 @@ export const latestAssets = [
       color: "black",
       producer: "Sony",
       price: "$970.49",
-      createdAt: "01.02.2023",
     },
     {
       id: 10,
@@ -401,7 +305,6 @@ export const latestAssets = [
       color: "black",
       producer: "Acer",
       price: "$599.99",
-      createdAt: "01.02.2023",
       inStock: true,
     },
   ];
@@ -460,32 +363,6 @@ export const latestAssets = [
         },
       ],
     },
-    activities: [
-      {
-        text: "John Doe purchased Playstation 5 Digital Edition",
-        time: "3 day ago",
-      },
-      {
-        text: "John Doe added 3 items into their wishlist",
-        time: "1 week ago",
-      },
-      {
-        text: "John Doe purchased Sony Bravia KD-32w800",
-        time: "2 weeks ago",
-      },
-      {
-        text: "John Doe reviewed a product",
-        time: "1 month ago",
-      },
-      {
-        text: "John Doe added 1 items into their wishlist",
-        time: "1 month ago",
-      },
-      {
-        text: "John Doe reviewed a product",
-        time: "2 months ago",
-      },
-    ],
   };
 
 
@@ -543,30 +420,4 @@ export const latestAssets = [
         },
       ],
     },
-    activities: [
-      {
-        text: "John Doe purchased Playstation 5 Digital Edition",
-        time: "3 day ago",
-      },
-      {
-        text: "Jane Doe added Playstation 5 Digital Edition into their wishlist",
-        time: "1 week ago",
-      },
-      {
-        text: "Mike Doe purchased Playstation 5 Digital Edition",
-        time: "2 weeks ago",
-      },
-      {
-        text: "Anna Doe reviewed the product",
-        time: "1 month ago",
-      },
-      {
-        text: "Michael Doe added Playstation 5 Digital Edition into their wishlist",
-        time: "1 month ago",
-      },
-      {
-        text: "Helen Doe reviewed the product",
-        time: "2 months ago",
-      },
-    ],
   };

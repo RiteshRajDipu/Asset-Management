@@ -8,7 +8,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import User from "./pages/user/User";
 import Product from "./pages/product/Product";
 import "./styles/global.scss";
-import Update from "./pages/login/Update";
+// import Update from "./pages/login/Update";
+import UpdateFinalForm from "./pages/login/finalForm/UpdataFinalForm";
 
 const App = () => {
   const Layout = () => {
@@ -58,14 +59,17 @@ const App = () => {
       path:"/login",
       element: <AuthPage />
     },
+    // {
+    //   path:"/update",
+    //   element: <Update />
+    // },
     {
       path:"/update",
-      element: <Update />
+      element: <UpdateFinalForm />
     }
   ]);
 
   return <RouterProvider router={router} />;
-
 }
 
 export default App;

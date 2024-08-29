@@ -1,11 +1,12 @@
 import "./add.scss";
-import { userRows } from "../../data";
+// import { userRows } from "../../data";
+import PropTypes from 'prop-types';
 
 const Add = (props) => {
 
-  const addNewUser = (payload) => {
-     console.log(payload)
-  };
+  // const addNewUser = (payload) => {
+  //   //  console.log(payload)
+  // };
   
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,11 +33,23 @@ const Add = (props) => {
               <input value={column.dataValue} type={column.type} name={column.field} placeholder={column.field} />
             </div>
           ))}
-          <button onClick={() => addNewUser(userRows)}>Send</button>
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
   )
 }
 
-export default Add
+Add.propTypes = {
+  setOpen: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
+  slug: PropTypes.string.isRequired,
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      width: PropTypes.number.isRequired
+    })
+  ).isRequired
+};
+
+export default Add;
