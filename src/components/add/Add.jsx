@@ -1,12 +1,7 @@
 import "./add.scss";
-// import { userRows } from "../../data";
 import PropTypes from 'prop-types';
 
 const Add = (props) => {
-
-  // const addNewUser = (payload) => {
-  //   //  console.log(payload)
-  // };
   
   const handleSubmit = (event) => {
     event.preventDefault();

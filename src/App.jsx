@@ -10,6 +10,7 @@ import Product from "./pages/product/Product";
 import "./styles/global.scss";
 // import Update from "./pages/login/Update";
 import UpdateFinalForm from "./pages/login/finalForm/UpdataFinalForm";
+import LoginFinalForm from "./pages/login/finalForm/LoginFinalForm";
 
 const App = () => {
   const Layout = () => {
@@ -66,6 +67,10 @@ const App = () => {
     {
       path:"/update",
       element: <UpdateFinalForm />
+    },
+    {
+      path:"/login",
+      element: <LoginFinalForm />
     }
   ]);
 

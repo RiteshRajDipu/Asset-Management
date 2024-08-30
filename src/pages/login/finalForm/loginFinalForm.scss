@@ -1,0 +1,46 @@
+// loginForm.scss
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  background-color: #ffffff;
+
+  border-radius: 8px;
+
+  h4 {
+    margin-bottom: 24px;
+  }
+
+  .MuiTextField-root {
+    margin-bottom: 16px;
+
+    &.Mui-error {
+      .MuiOutlinedInput-root {
+        fieldset {
+          border-color: #d32f2f;
+        }
+      }
+    }
+  }
+
+  .MuiButton-root {
+    margin-top: 24px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(171, 103, 171);
+    color: #ffffff;
+  }
+
+  .MuiAlert-root {
+    margin-bottom: 16px;
+  }
+}

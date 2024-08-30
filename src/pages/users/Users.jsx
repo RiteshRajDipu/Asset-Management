@@ -1,11 +1,12 @@
 import "./users.scss";
 import { useEffect, useState } from "react";
 import Datatable from "../../components/datatable/Datatable";
-import Add from "../../components/add/Add";
+// import Add from "../../components/add/Add";
 import { useSelector, useDispatch } from "react-redux";
 import { addItem, removeItem, updateIds } from '../../store/slices/UsersSlice';
 import * as XLSX from 'xlsx';
 import { setUsers } from "../../store/slices/userSlice";
+import AddFinalForm from "../../components/add/AddFinalForm";
 
 const columns = [
   { field: "id", headerName: "ID", width: 50 },
@@ -111,7 +112,8 @@ function Users() {
         // onEdit={onEditHandler}
         onDelete={onDeleteHandler}
       />
-      {open && <Add slug="user" onAdd={addUserHandler} columns={columns} setOpen={setOpen} />}
+      {/* {open && <Add slug="user" onAdd={addUserHandler} columns={columns} setOpen={setOpen} />} */}
+      {open && <AddFinalForm slug="user" onAdd={addUserHandler} columns={columns} setOpen={setOpen} />}
     </div>
   );
 }
